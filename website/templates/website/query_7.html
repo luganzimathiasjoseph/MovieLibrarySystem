@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+
+
+{% block title %}
+    Query 7: category with price > 1600
+{% endblock title %}
+    
+
+{% block content %}
+    <h1 class="text-center my-4">Query 7: category with price > 1600</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>category id</th>
+                <th>category name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for query in query_7 %}
+            <tr>
+                <td>{{ query.0 }}</td>
+                <td>{{ query.1 }}</td>
+                <td>{{ query.2 }}</td>
+
+   
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock content %}
+
